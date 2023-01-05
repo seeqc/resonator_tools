@@ -15,3 +15,11 @@ https://scholar.google.de/scholar?oi=bibs&hl=de&cites=690000812747125148&as_sdt=
 
 Questions? Contact the author:
 https://www.phi.kit.edu/ustinov_downloads.php
+
+## SeeQC Fork
+
+This fork updates the dependencies to ensure compatibility with latest python and package releases. The specific dependency version requirements are for compatibility with the SeeQC control software control-core project.
+
+The project version is changed to adhere to semantic versioning.
+
+This package can installed using poetry as `poetry install`, or with pip as `pip install .`, or built as a package using `poetry build` and choosing the appropriate package in the `./dist/` directory.
