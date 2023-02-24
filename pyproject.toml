@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "resonator_tools"
+version = "0.1.0"
+description = "resonator_tools"
+authors = ["Sebastian Probst"]
+
+[tool.poetry.dependencies]
+python = "~3.8.15 || ~3.9.15 || ~3.10.8 || ~3.11.0"
+nose = "^1.3.7"
+numpy = "^1.24.1"
+scipy = "^1.10.0"
+matplotlib = "^3.6.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0","setuptools >= 40.6.0", "wheel"]
+build-backend = "poetry.core.masonry.api"

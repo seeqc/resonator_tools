@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: '*'
+
+jobs:
+  examples:
+    timeout-minutes: 5
+    runs-on: ubuntu-latest
+    continue-on-error: false
+    steps:
+    - name: Run action checkout v3
+      uses: actions/checkout@v3
+    - name: Run action setup-python v4 for Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - name: Run action install-poetry v1
+      uses: snok/install-poetry@v1
+    - name: Run examples
+      run: |
+          poetry install
+          cd examples/
+          poetry run python notch_port_example.py
+          poetry run python reflection_port_example.py
+
